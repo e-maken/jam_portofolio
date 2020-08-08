@@ -19,29 +19,26 @@
         {{ tag.fields.name }}
       </li>
     </div>
-    <div class="my-10">
-      <p v-if="work.fields.url" class="text-xs">
-        <fa-layers full-width class="mr-1">
-          <fa :icon="faLink" />
-        </fa-layers>
-        {{ work.fields.url }}
-      </p>
-      <p v-if="work.fields.gitHub" class="text-xs">
-        <fa-layers full-width class="mr-1">
+    <div class="my-5 text-center">
+      <a href="https://twitter.com/Oph67Ro0266hO0K">
+      <fa-layers full-width class="fa-2x">
+        <fa :icon="faTwitter" />
+      </fa-layers>
+      </a>
+      <a href="https://github.com/e-maken">
+        <fa-layers full-width class="fa-2x">
           <fa :icon="faGithub" />
         </fa-layers>
-        {{ work.fields.gitHub }}
-      </p>
+      </a>
     </div>
     <div v-html="$md.render(work.fields.content)"></div>
   </div>
 </template>
-// ここまで追加
 
 <script>
 
 // ここから追加
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 // ここまで追加
 
@@ -63,8 +60,8 @@ export default {
 
   // ここから追加
   computed: {
-    faLink () {
-      return faLink
+    faTwitter () {
+      return faTwitter
     },
     faGithub () {
       return faGithub
